@@ -38,3 +38,7 @@ Skipped the 2nd part: database
 
     >Product.objects.get(id=1)
 ```
+
+## Templates
+`project/templates/some\_path/\*.html` has higher priority than
+`project/app/templates/some\_path/\*.html`
