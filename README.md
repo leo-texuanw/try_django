@@ -1,17 +1,40 @@
 # [Tutorial](https://docs.djangoproject.com/en/2.2/intro/tutorial01/)
 Skipped the 2nd part: database
+
 ## Commands
+### New project or apps
 ```
     $ django-admin startproject projectname
     $ python manage.py startapp appname
 ```
 
-## Start the server
+### Start the server
 ```
-    python manage.py runserver 0:5000
+    $ python manage.py runserver 0:8000
 ```
+
+### Modify models
+```
+    $ python manage.py makemigrations
+    $ python manage.py migrate
+```
+
+### Create admin user
+```
+    # also remember to add site to admin.py file
+    $ python manage.py createsuperuser
+```
+
 
 ## Test modules in shell
 ```
-    python manage.py shell
+    $ python manage.py shell
+    > from product.models import Product
+
+    > Product.objects.all()
+
+    > Product.objects.create(title='New Product', description='a new product',
+    >       price=23.32, summary='nice!', featured=True)
+
+    >Product.objects.get(id=1)
 ```

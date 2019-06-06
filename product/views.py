@@ -1,3 +1,8 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Product
+
+
+def product_detail_view(request):
+    return HttpResponse("<h1>hello world</h1>")
