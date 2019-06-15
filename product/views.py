@@ -36,10 +36,6 @@ def product_create_view(request):
     # add new record to db
     form = ProductForm(request.POST or None, initial=initial_data)
 
-    # mod record in db
-    # obj = Product.objects.get(id=1)
-    # form = ProductForm(request.POST or None, instance=obj)
-
     if form.is_valid():
         form.save()
         form = ProductForm()    # reset after submit
@@ -67,6 +63,23 @@ def product_create_raw_view(request):
     }
 
     return render(request, "product/product_create.html", context)
+
+
+def product_update_view(request, id):
+    # mod record in db
+    obj = get_object_or_404(Product, id=id)
+    form = ProductForm(request.POST or None, instance=obj)
+
+    if form.is_valid():
+        form.save()
+        form = ProductForm()    # reset after submit
+
+    context = {
+        'form': form
+    }
+
+    return render(request, "product/product_create.html", context)
+
 
 def product_delete_view(request, id):
     obj = get_object_or_404(Product, id=id)
