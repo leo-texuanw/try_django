@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import './App.css';
+import { BrowserRouter as Router} from 'react-router-dom';
+import BaseRouter from './routes';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 import CustomLayout from './containers/Layout';
-import GoalList from './containers/GoalListView';
+
+//import GoalList from './containers/GoalListView';
 
 class App extends Component {
   render () {
     return (
       <div className="App">
-        <CustomLayout>
-          <GoalList />
-        </CustomLayout>
+        <Router>
+          <CustomLayout>
+            <BaseRouter />
+          </CustomLayout>
+        </Router>
       </div>
     );
   }
