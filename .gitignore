@@ -117,3 +117,4 @@ __pycache__
 .Db_Store
 log
 *.secret.*
+frontend/goals/node_modules/*
