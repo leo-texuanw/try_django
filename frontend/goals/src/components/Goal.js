@@ -45,7 +45,7 @@ const Goals = (props) => {
             >
                 <List.Item.Meta
                 avatar={<Avatar src={item.avatar} />}
-                title={<a href={item.href}>{item.name}</a>}
+                title={<a href={`/goals/${item.id}`}>{item.name}</a>}
                 description={item.content}
                 />
                 {item.content}

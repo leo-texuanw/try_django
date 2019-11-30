@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 
 const { SubMenu } = Menu;
@@ -16,25 +17,26 @@ const CustomLayout = (props) => {
                 defaultSelectedKeys={['2']}
                 style={{ lineHeight: '64px' }}
             >
-                <Menu.Item key="1">nav 1</Menu.Item>
-                <Menu.Item key="2">nav 2</Menu.Item>
-                <Menu.Item key="3">nav 3</Menu.Item>
+                <Menu.Item key="1">Home</Menu.Item>
+                <Menu.Item key="2">Goals</Menu.Item>
             </Menu>
             </Header>
+
             <Layout>
             <Sider width={200} style={{ background: '#fff' }}>
                 <Menu
-                mode="inline"
-                defaultSelectedKeys={['1']}
-                defaultOpenKeys={['sub1']}
-                style={{ height: '100%', borderRight: 0 }}
+                    mode="inline"
+                    defaultSelectedKeys={['1']}
+                    defaultOpenKeys={['sub2']}
+                    style={{ height: '100%', borderRight: 0 }}
                 >
+
                 <SubMenu
                     key="sub1"
                     title={
                     <span>
                         <Icon type="user" />
-                        subnav 1
+                        Joined
                     </span>
                     }
                 >
@@ -43,12 +45,13 @@ const CustomLayout = (props) => {
                     <Menu.Item key="3">option3</Menu.Item>
                     <Menu.Item key="4">option4</Menu.Item>
                 </SubMenu>
+
                 <SubMenu
                     key="sub2"
                     title={
                     <span>
                         <Icon type="laptop" />
-                        subnav 2
+                        Discover
                     </span>
                     }
                 >
@@ -57,12 +60,13 @@ const CustomLayout = (props) => {
                     <Menu.Item key="7">option7</Menu.Item>
                     <Menu.Item key="8">option8</Menu.Item>
                 </SubMenu>
+
                 <SubMenu
                     key="sub3"
                     title={
                     <span>
                         <Icon type="notification" />
-                        subnav 3
+                        Notifications
                     </span>
                     }
                 >
@@ -73,11 +77,12 @@ const CustomLayout = (props) => {
                 </SubMenu>
                 </Menu>
             </Sider>
+
             <Layout style={{ padding: '0 24px 24px' }}>
                 <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item>Home</Breadcrumb.Item>
+                <Breadcrumb.Item><Link to='/goals'>Home</Link></Breadcrumb.Item>
+                <Breadcrumb.Item><Link to='/goals'>Goals</Link></Breadcrumb.Item>
                 <Breadcrumb.Item>List</Breadcrumb.Item>
-                <Breadcrumb.Item>App</Breadcrumb.Item>
                 </Breadcrumb>
                 <Content
                 style={{
