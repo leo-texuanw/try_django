@@ -1,5 +1,19 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Dependencies
+```
+    $ npm install -g create-react-app
+    $ npm install --save antd
+    $ npm install --save axios
+    $ npm install --save react-router-dom
+```
+
+## Run
+```
+    $ export PORT=5000  npm start
+    $ npm start
+```
+
 ## Available Scripts
 
 In the project directory, you can run:

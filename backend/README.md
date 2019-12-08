@@ -1,5 +1,11 @@
 # [Tutorial](https://docs.djangoproject.com/en/2.2/intro/tutorial01/)
+[Goal Video](https://www.youtube.com/watch?v=uZgRbnIsgrA)
 Skipped the 2nd part: database
+
+## Dependencies
+```
+    pip install django-cors-headers
+```
 
 ## Commands
 ### New project or apps
